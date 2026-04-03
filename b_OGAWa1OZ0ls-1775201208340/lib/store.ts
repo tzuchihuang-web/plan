@@ -305,7 +305,7 @@ export const useStudioStore = create<StudioStore>((set, get) => ({
               status = "blocked";
               break;
             } else if (distance < tightThreshold) {
-              if (status !== "blocked") status = "tight";
+              status = "tight";
             }
           }
         }

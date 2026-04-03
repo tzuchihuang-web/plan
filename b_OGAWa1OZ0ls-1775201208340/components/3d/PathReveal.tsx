@@ -22,7 +22,6 @@ function getStatusColor(status: PathStatus): string {
 
 // Single animated path line
 function PathLine({ path }: { path: MovementPath }) {
-  const lineRef = useRef<THREE.Line>(null);
   const dotRef = useRef<THREE.Mesh>(null);
   const progressRef = useRef(0);
 
@@ -70,7 +69,7 @@ function PathLine({ path }: { path: MovementPath }) {
   return (
     <group>
       {/* Path line */}
-      <line ref={lineRef}>
+      <line>
         <bufferGeometry attach="geometry" {...geometry} />
         <lineBasicMaterial 
           vertexColors 
